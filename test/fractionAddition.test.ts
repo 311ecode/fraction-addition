@@ -1,4 +1,4 @@
-import { addFractions } from './fractionAddition';
+import { addFractions } from '../src/fractionAddition';
 
 describe('Fraction Addition Tests', () => {
   test('1/500 + 1/500 should equal 1/250', () => {

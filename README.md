@@ -95,9 +95,10 @@ npm start
 ```
 fraction-addition/
 ├── src/
-│   ├── fractionAddition.ts      # Main implementation
+│   └── fractionAddition.ts      # Main implementation
+├── test/
 │   └── fractionAddition.test.ts # Test suite
-├── dist/                         # Compiled JavaScript (generated)
+├── dist/                        # Compiled JavaScript (generated)
 ├── jest.config.js               # Jest configuration
 ├── tsconfig.json                # TypeScript configuration
 ├── package.json                 # Package metadata
