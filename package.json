@@ -1,14 +1,37 @@
 {
   "name": "fraction-addition",
   "version": "1.0.0",
-  "description": "TypeScript project for adding and simplifying fractions",
+  "description": "A lightweight TypeScript library for adding and simplifying fractions",
   "main": "dist/fractionAddition.js",
+  "types": "dist/fractionAddition.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "tsc",
     "start": "node dist/fractionAddition.js",
     "dev": "ts-node src/fractionAddition.ts",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "keywords": [
+    "fraction",
+    "math",
+    "addition",
+    "simplify",
+    "gcd",
+    "mathematics",
+    "arithmetic",
+    "calculator"
+  ],
+  "author": "Imre Toth <toth.imre@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/fraction-addition.git"
   },
   "devDependencies": {
     "@types/jest": "^29.5.0",
@@ -17,5 +40,8 @@
     "ts-jest": "^29.1.0",
     "ts-node": "^10.9.0",
     "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
   }
 }
