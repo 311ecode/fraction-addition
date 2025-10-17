@@ -1,154 +1,70 @@
-# fraction-addition
+# fraction-arithmetic
 
-A lightweight TypeScript library for adding and simplifying fractions with precise results.
+A lightweight TypeScript library for adding, subtracting, multiplying, and dividing fractions with precise, simplified results.
 
 ## Installation
 
 ```bash
-npm install fraction-addition
-```
-
-Or with yarn:
-
-```bash
-yarn add fraction-addition
-```
+npm install fraction-arithmetic
+````
 
 ## Usage
 
 ```typescript
-import { addFractions } from 'fraction-addition';
+import { addFractions, subtractFractions, multiplyFractions, divideFractions } from 'fraction-arithmetic';
 
-// Add two fractions and get simplified result
-const result = addFractions(1, 500, 1, 500);
-console.log(result); // Output: "1/250"
+// Add
+console.log(addFractions(1, 2, 1, 3)); // Output: "5/6"
 
-// More examples
-console.log(addFractions(1, 2, 1, 3));    // Output: "5/6"
-console.log(addFractions(2, 1000, 1, 500)); // Output: "1/250"
-console.log(addFractions(1, 4, 1, 4));    // Output: "1/2"
+// Subtract
+console.log(subtractFractions(1, 2, 1, 3)); // Output: "1/6"
+
+// Multiply
+console.log(multiplyFractions(1, 2, 2, 3)); // Output: "1/3"
+
+// Divide
+console.log(divideFractions(1, 2, 1, 4)); // Output: "2/1"
 ```
 
 ## API
 
 ### `addFractions(num1, den1, num2, den2)`
 
-Adds two fractions and returns the simplified result as a string.
+Adds two fractions. Returns a simplified string `numerator/denominator`.
 
-**Parameters:**
-- `num1` (number): Numerator of the first fraction
-- `den1` (number): Denominator of the first fraction
-- `num2` (number): Numerator of the second fraction
-- `den2` (number): Denominator of the second fraction
+### `subtractFractions(num1, den1, num2, den2)`
 
-**Returns:**
-- `string`: The simplified fraction in the format "numerator/denominator"
+Subtracts the second fraction from the first. Returns a simplified string.
 
-**Example:**
-```typescript
-addFractions(1, 500, 1, 500); // Returns "1/250"
-```
+### `multiplyFractions(num1, den1, num2, den2)`
+
+Multiplies two fractions. Returns a simplified string.
+
+### `divideFractions(num1, den1, num2, den2)`
+
+Divides the first fraction by the second. Returns a simplified string. Throws an error if dividing by zero.
 
 ## Features
 
-- ✨ Simple and intuitive API
-- 🔢 Automatic fraction simplification using GCD (Greatest Common Denominator)
-- 📦 Zero dependencies
-- 💪 Written in TypeScript with full type safety
-- ✅ Thoroughly tested
-- 🚀 Lightweight and fast
-
-## Development
-
-### Setup
-
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/fraction-addition.git
-cd fraction-addition
-
-# Install dependencies
-npm install
-```
-
-### Scripts
-
-```bash
-# Run the example
-npm run dev
-
-# Build the project
-npm run build
-
-# Run tests
-npm test
-
-# Run tests in watch mode
-npm run test:watch
-
-# Run compiled JavaScript
-npm start
-```
-
-### Project Structure
-
-```
-fraction-addition/
-├── src/
-│   └── fractionAddition.ts      # Main implementation
-├── test/
-│   └── fractionAddition.test.ts # Test suite
-├── dist/                        # Compiled JavaScript (generated)
-├── jest.config.js               # Jest configuration
-├── tsconfig.json                # TypeScript configuration
-├── package.json                 # Package metadata
-└── README.md                    # This file
-```
+  - ✨ Simple and intuitive API for all basic fraction operations
+  - 🔢 Automatic fraction simplification using GCD (Greatest Common Denominator)
+  - 📦 Zero dependencies
+  - 💪 Written in TypeScript with full type safety
+  - ✅ Thoroughly tested
+  - 🚀 Lightweight and fast
 
 ## Algorithm
 
-The library uses the standard fraction addition formula:
-
-```
-a/b + c/d = (a×d + c×b) / (b×d)
-```
-
-The result is then simplified by dividing both numerator and denominator by their Greatest Common Denominator (GCD), calculated using Euclid's algorithm.
+The library uses standard fraction arithmetic formulas. The result is simplified by dividing the numerator and denominator by their Greatest Common Denominator (GCD), calculated using Euclid's algorithm.
 
 ## Testing
 
-The library includes comprehensive unit tests covering:
-- Basic fraction addition
-- Simplification edge cases
-- Zero handling
-- Results that equal whole numbers
-
-Run the test suite:
+The library includes comprehensive unit tests. Run the suite with:
 
 ```bash
 npm test
 ```
 
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
 ## License
 
-MIT © [Your Name]
-
-## Author
-
-Your Name - [@yourhandle](https://twitter.com/yourhandle)
-
-## Links
-
-- [GitHub Repository](https://github.com/yourusername/fraction-addition)
-- [npm Package](https://www.npmjs.com/package/fraction-addition)
-- [Issue Tracker](https://github.com/yourusername/fraction-addition/issues)
+MIT

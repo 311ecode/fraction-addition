@@ -1,9 +1,9 @@
 {
-  "name": "fraction-addition",
-  "version": "1.0.0",
-  "description": "A lightweight TypeScript library for adding and simplifying fractions",
-  "main": "dist/fractionAddition.js",
-  "types": "dist/fractionAddition.d.ts",
+  "name": "fraction-arithmetic",
+  "version": "1.1.0",
+  "description": "A lightweight TypeScript library for fraction arithmetic (add, subtract, multiply, divide)",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist",
     "README.md",
@@ -11,8 +11,8 @@
   ],
   "scripts": {
     "build": "tsc",
-    "start": "node dist/fractionAddition.js",
-    "dev": "ts-node src/fractionAddition.ts",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
     "test": "jest",
     "test:watch": "jest --watch",
     "prepublishOnly": "npm run build && npm test"
@@ -21,11 +21,13 @@
     "fraction",
     "math",
     "addition",
+    "subtraction",
+    "multiplication",
+    "division",
     "simplify",
     "gcd",
     "mathematics",
-    "arithmetic",
-    "calculator"
+    "arithmetic"
   ],
   "author": "Imre Toth <toth.imre@gmail.com>",
   "license": "MIT",
